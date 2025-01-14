@@ -1,0 +1,16 @@
+@echo off
+set p4port=10.72.34.202:1666
+set p4user=limenghui
+set p4client=limenghui_cnshaw2609_9721
+setlocal enabledelayedexpansion
+
+set "filename=fliter.txt"
+
+for /f "usebackq delims=" %%a in ("%filename%") do (
+    set "line=%%a"
+    p4 sync -f !line!
+    echo !line!
+    REM 在这里可以对每一行进行处理，例如调用其他命令或脚本
+)
+
+endlocal
