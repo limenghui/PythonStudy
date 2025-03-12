@@ -80,3 +80,24 @@ eg:
 \w 匹配所有单词字符  \W 匹配所有非单词字符
 \s 匹配所有空白字符  \S匹配所有非空白字符
 . 匹配除换行符 \n之外其他所有字符
+
+
+装饰器函数定义格式
+def decorator(func):
+    def wrapper(*args, **kw):
+        print(time.time())
+        func(*args, **kw)
+    return wrapper
+
+可迭代对象： 凡是可以被for in 循环来遍历的数据结构
+迭代器 class （包括__iter__,__next__）
+
+walrus operator  海象运算符 :=
+
+f关键字做字符串拼接
+示例
+ a='python'
+ if((b:=len(a)) >5:
+       print('长度大于5；'+'真实长度为' + str(b)) #等价于 print(f'长度大于5；真实长度为{b}')
+
+新增数据类dataclass装饰器
